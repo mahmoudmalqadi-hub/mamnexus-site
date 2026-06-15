@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>MAM Nexus | Deep-Tech MedTech Simulation SaaS</title>
+  <title>MAM Nexus | Surgical Robotics Simulation SaaS</title>
 
-  <meta name="description" content="MAM Nexus is a deep-tech MedTech simulation platform led by Eng. Mahmoud Alqadi, building non-clinical CAE software for biomedical micro-robotics and intraluminal device R&D." />
-  <meta name="author" content="Eng. Mahmoud Alqadi" />
+  <meta name="description" content="MAM Nexus is a deep-tech surgical robotics simulation platform building CAE software for biomedical micro-robotics, RF parameter modeling, thermal response visualization, and intraluminal device R&D." />
 
-  <meta property="og:title" content="MAM Nexus | Deep-Tech MedTech Simulation SaaS" />
-  <meta property="og:description" content="Non-clinical CAE simulation software for biomedical micro-robotics and intraluminal device R&D." />
+  <meta property="og:title" content="MAM Nexus | Surgical Robotics Simulation SaaS" />
+  <meta property="og:description" content="CAE simulation software for surgical robotics, biomedical micro-robotics, RF parameter modeling, and intraluminal device R&D." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mamnexus.com" />
 
@@ -20,14 +18,12 @@
 
     :root {
       --bg: #030712;
-      --bg2: #07111f;
-      --panel: rgba(10, 20, 36, 0.78);
+      --panel: rgba(10, 20, 36, 0.80);
       --panel2: rgba(255, 255, 255, 0.045);
       --text: #f3f7ff;
       --muted: #a9b6c9;
       --soft: #748399;
       --line: rgba(255, 255, 255, 0.12);
-      --line2: rgba(94, 234, 212, 0.24);
       --cyan: #5eead4;
       --blue: #60a5fa;
       --violet: #8b5cf6;
@@ -69,7 +65,7 @@
       position: sticky;
       top: 0;
       z-index: 20;
-      background: rgba(3, 7, 18, 0.82);
+      background: rgba(3, 7, 18, 0.84);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--line);
     }
@@ -144,7 +140,7 @@
       display: inline-flex;
       align-items: center;
       padding: 8px 13px;
-      border: 1px solid var(--line2);
+      border: 1px solid rgba(94, 234, 212, 0.24);
       border-radius: 999px;
       color: var(--cyan);
       background: rgba(94, 234, 212, 0.07);
@@ -233,10 +229,9 @@
     .tech-card:before {
       content: "";
       position: absolute;
-      inset: -1px;
-      background:
-        linear-gradient(90deg, transparent, rgba(94,234,212,0.18), transparent);
+      inset: 0 0 auto 0;
       height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(94,234,212,0.30), transparent);
     }
 
     .tech-card h3 {
@@ -317,7 +312,7 @@
       gap: 18px;
     }
 
-    .card, .panel, .notice, .contact-box {
+    .card, .panel, .contact-box {
       border: 1px solid var(--line);
       background: var(--panel);
       border-radius: 22px;
@@ -348,16 +343,6 @@
       align-items: start;
     }
 
-    .notice {
-      border-color: rgba(96,165,250,0.32);
-      background: rgba(96,165,250,0.08);
-      color: #cddbf0;
-    }
-
-    .notice strong {
-      color: #ffffff;
-    }
-
     .focus-list {
       display: grid;
       gap: 12px;
@@ -375,37 +360,18 @@
       padding-top: 0;
     }
 
-    .founder-card {
-      display: grid;
-      grid-template-columns: 0.88fr 1.12fr;
-      gap: 20px;
-      align-items: stretch;
-    }
-
-    .identity {
+    .founder-box {
       border: 1px solid var(--line);
       background:
         radial-gradient(circle at top left, rgba(94,234,212,0.13), transparent 42%),
         var(--panel2);
       border-radius: 24px;
-      padding: 26px;
+      padding: 28px;
+      max-width: 920px;
     }
 
-    .avatar {
-      width: 70px;
-      height: 70px;
-      border-radius: 22px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, var(--cyan), var(--blue));
-      color: #03111d;
-      font-family: "Space Grotesk", Arial, sans-serif;
-      font-weight: 900;
-      margin-bottom: 18px;
-    }
-
-    .identity h3 {
-      font-size: 1.5rem;
+    .founder-box h3 {
+      font-size: 1.55rem;
       margin-bottom: 6px;
     }
 
@@ -465,7 +431,7 @@
         padding-top: 62px;
       }
 
-      .hero-grid, .grid, .split, .founder-card, .contact-box {
+      .hero-grid, .grid, .split, .contact-box {
         grid-template-columns: 1fr;
       }
 
@@ -474,7 +440,6 @@
       }
     }
   </style>
-
 </head>
 
 <body>
@@ -485,188 +450,165 @@
         <span>MAM <strong>Nexus</strong></span>
       </a>
 
-```
-  <nav class="nav-links">
-    <a href="#platform">Platform</a>
-    <a href="#research">Research</a>
-    <a href="#founder">Founder</a>
-    <a class="nav-cta" href="#contact">Contact</a>
-  </nav>
-</div>
-```
-
+      <nav class="nav-links">
+        <a href="#platform">Platform</a>
+        <a href="#simulation">Simulation</a>
+        <a href="#founder">Founder</a>
+        <a class="nav-cta" href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Deep-Tech MedTech Simulation SaaS</div>
+          <div class="eyebrow">Deep-Tech Surgical Robotics Simulation SaaS</div>
 
-```
-      <h1><span class="gradient">Simulation-first infrastructure</span> for biomedical micro-robotics R&D.</h1>
+          <h1><span class="gradient">Simulation-first infrastructure</span> for surgical robotics and biomedical micro-robotics R&D.</h1>
 
-      <p class="hero-copy">
-        MAM Nexus is a non-clinical CAE simulation platform for biomedical engineering teams,
-        MedTech innovators, and research groups exploring RF-controlled micro-robotics,
-        untethered intraluminal systems, and early-stage device behavior.
-      </p>
+          <p class="hero-copy">
+            MAM Nexus is a CAE simulation platform for surgical robotics innovators,
+            biomedical engineering teams, and research groups exploring RF-controlled micro-robotics,
+            untethered intraluminal systems, and early-stage device behavior.
+          </p>
 
-      <div class="actions">
-        <a class="btn primary" href="mailto:mahmoud.alqadi@mamnexus.com">Contact Eng. Mahmoud Alqadi</a>
-        <a class="btn secondary" href="#platform">View platform focus</a>
+          <div class="actions">
+            <a class="btn primary" href="mailto:mahmoud.alqadi@mamnexus.com">Contact Founder</a>
+            <a class="btn secondary" href="#simulation">View simulation focus</a>
+          </div>
+
+          <p class="micro">Engineering R&D simulation software for surgical robotics and biomedical device development.</p>
+        </div>
+
+        <aside class="tech-card">
+          <h3>MAM Nexus Simulation Layer</h3>
+
+          <div class="spec"><span>Primary category</span><strong>CAE Simulation SaaS</strong></div>
+          <div class="spec"><span>Technical domain</span><strong>Surgical robotics & micro-robotics</strong></div>
+          <div class="spec"><span>Parameter focus</span><strong>RF, thermal, motion response</strong></div>
+          <div class="spec"><span>Use scope</span><strong>Engineering R&D</strong></div>
+
+          <div class="chips">
+            <span class="chip">Surgical robotics R&D</span>
+            <span class="chip">RF parameter modeling</span>
+            <span class="chip">Thermal response</span>
+            <span class="chip">Intraluminal systems</span>
+            <span class="chip">Pre-prototyping</span>
+          </div>
+        </aside>
       </div>
+    </section>
 
-      <p class="micro">Non-clinical engineering R&D software. Not a patient-facing medical device.</p>
-    </div>
+    <section id="platform">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Platform Focus</div>
+          <h2>Built for early technical exploration before hardware-heavy development.</h2>
+          <p class="lead">
+            The platform direction is designed to help teams explore feasibility, control logic,
+            RF behavior, temperature response, and system motion before costly physical prototyping.
+          </p>
+        </div>
 
-    <aside class="tech-card">
-      <h3>MAM Nexus Simulation Layer</h3>
+        <div class="grid">
+          <article class="card">
+            <div class="number">01</div>
+            <h3>Surgical Robotics Simulation</h3>
+            <p>Software-first modeling for surgical robotics concepts, biomedical micro-robotic systems, and early feasibility exploration.</p>
+          </article>
 
-      <div class="spec"><span>Primary category</span><strong>CAE Simulation SaaS</strong></div>
-      <div class="spec"><span>Technical domain</span><strong>Biomedical micro-robotics</strong></div>
-      <div class="spec"><span>Control theme</span><strong>RF modeling</strong></div>
-      <div class="spec"><span>Use scope</span><strong>Non-clinical R&D</strong></div>
+          <article class="card">
+            <div class="number">02</div>
+            <h3>RF Parameter Modeling</h3>
+            <p>Changing RF-related values helps visualize how the system may respond across motion behavior, field interaction, and thermal output.</p>
+          </article>
 
-      <div class="chips">
-        <span class="chip">Intraluminal systems</span>
-        <span class="chip">Pre-prototyping</span>
-        <span class="chip">Motion behavior</span>
-        <span class="chip">Engineering validation</span>
+          <article class="card">
+            <div class="number">03</div>
+            <h3>R&D De-risking</h3>
+            <p>Supports pre-prototyping analysis before teams commit to expensive experimental cycles.</p>
+          </article>
+        </div>
       </div>
-    </aside>
-  </div>
-</section>
+    </section>
 
-<section id="platform">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">Platform Focus</div>
-      <h2>Built for early technical exploration before hardware-heavy development.</h2>
-      <p class="lead">
-        The platform direction is designed to help teams explore feasibility, control logic,
-        and system behavior before costly physical prototyping or clinical translation.
-      </p>
-    </div>
+    <section id="simulation">
+      <div class="container split">
+        <div class="panel">
+          <div class="kicker">Simulation Behavior</div>
+          <h2>Parameter-driven surgical robotics simulation.</h2>
+          <p>
+            MAM Nexus focuses on changing simulation values such as RF input, control parameters,
+            motion constraints, and system assumptions to show how behavior may change across the model.
+          </p>
+          <p>
+            For example, adjusting RF-related values can help visualize whether temperature response,
+            motion behavior, or control stability becomes problematic during early engineering exploration.
+          </p>
 
-    <div class="grid">
-      <article class="card">
-        <div class="number">01</div>
-        <h3>CAE Simulation SaaS</h3>
-        <p>Software-first modeling for biomedical micro-robotic systems and early feasibility exploration.</p>
-      </article>
+          <div class="focus-list">
+            <div class="focus-item">RF value changes and field-related behavior visualization.</div>
+            <div class="focus-item">Thermal response observation during simulation scenarios.</div>
+            <div class="focus-item">Motion, stability, and control behavior for intraluminal device concepts.</div>
+          </div>
+        </div>
 
-      <article class="card">
-        <div class="number">02</div>
-        <h3>RF Control Modeling</h3>
-        <p>Focused on synchronization, control logic, and behavior of RF-enabled untethered device concepts.</p>
-      </article>
-
-      <article class="card">
-        <div class="number">03</div>
-        <h3>R&D De-risking</h3>
-        <p>Supports pre-prototyping analysis before teams commit to expensive experimental cycles.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="research">
-  <div class="container split">
-    <div class="panel">
-      <div class="kicker">Why It Matters</div>
-      <h2>Biomedical micro-robotics needs sharper simulation workflows.</h2>
-      <p>
-        Intraluminal device research can involve fragmented tools, expensive fabrication,
-        and long iteration cycles before teams can communicate feasibility clearly.
-      </p>
-      <p>
-        MAM Nexus focuses on the early engineering layer: modeling behavior, exploring
-        system assumptions, and creating a clearer path from concept to prototype.
-      </p>
-
-      <div class="focus-list">
-        <div class="focus-item">Biomedical micro-robotics and untethered intraluminal device R&D.</div>
-        <div class="focus-item">RF synchronization, control logic, and system behavior modeling.</div>
-        <div class="focus-item">Research, startup, and incubation-facing technical communication.</div>
+        <div class="panel">
+          <div class="kicker">Why It Matters</div>
+          <h2>Surgical robotics needs sharper early-stage simulation workflows.</h2>
+          <p>
+            Surgical robotics and intraluminal device research can involve fragmented tools,
+            expensive fabrication, and long iteration cycles before teams can communicate feasibility clearly.
+          </p>
+          <p>
+            MAM Nexus focuses on the early engineering layer: modeling behavior, exploring system assumptions,
+            and creating a clearer path from concept to prototype.
+          </p>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <aside class="notice">
-      <strong>Positioning statement</strong>
-      <br><br>
-      MAM Nexus is not presented as a clinically approved medical device, hospital-ready surgical robot,
-      or patient treatment product.
-      <br><br>
-      It is positioned as non-clinical engineering simulation software for R&D and feasibility exploration.
-    </aside>
-  </div>
-</section>
+    <section id="founder">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Founder</div>
+          <h2>Led by Eng. Mahmoud Alqadi.</h2>
+        </div>
 
-<section id="founder">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">Founder</div>
-      <h2>Led by Eng. Mahmoud Alqadi.</h2>
-      <p class="lead">
-        MAM Nexus is founder-led by an electrical and biomedical engineer working across
-        medical systems, instrumentation, simulation direction, and deep-tech R&D positioning.
-      </p>
-    </div>
-
-    <div class="founder-card">
-      <div class="identity">
-        <div class="avatar">MA</div>
-        <h3>Eng. Mahmoud Alqadi</h3>
-        <div class="role">Founder & Principal Systems Innovator</div>
-        <p class="lead">
-          Electrical and biomedical engineering background with experience across biomedical
-          instrumentation, diagnostics, medical device quality/regulatory workflows, robotics systems,
-          and deep-tech R&D.
-        </p>
+        <div class="founder-box">
+          <h3>Eng. Mahmoud Alqadi</h3>
+          <div class="role">Founder & Principal Systems Innovator</div>
+          <p class="lead">
+            Electrical and biomedical engineering background with experience across biomedical instrumentation,
+            diagnostics, medical device quality/regulatory workflows, robotics systems, and deep-tech R&D.
+          </p>
+        </div>
       </div>
+    </section>
 
-      <div class="panel">
-        <div class="kicker">Operating Thesis</div>
-        <h2>Simulation before physical commitment.</h2>
-        <p>
-          MAM Nexus is built around a software-first strategy: use simulation to clarify feasibility,
-          communicate system behavior, and reduce early-stage R&D friction before hardware-heavy development.
-        </p>
-        <p>
-          The project is positioned for research collaboration, MedTech innovation programs,
-          deep-tech incubation, and early ecosystem validation.
-        </p>
+    <section id="contact">
+      <div class="container contact-box">
+        <div>
+          <div class="kicker">Contact</div>
+          <h2>Research, incubation, and partnership inquiries.</h2>
+          <p>
+            For collaboration, startup program, incubation, or research ecosystem discussions,
+            contact MAM Nexus directly.
+          </p>
+        </div>
+
+        <div class="contact-actions">
+          <a class="btn primary email" href="mailto:mahmoud.alqadi@mamnexus.com">mahmoud.alqadi@mamnexus.com</a>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="container contact-box">
-    <div>
-      <div class="kicker">Contact</div>
-      <h2>Research, incubation, and partnership inquiries.</h2>
-      <p>
-        For collaboration, startup program, incubation, or research ecosystem discussions,
-        contact Eng. Mahmoud Alqadi directly.
-      </p>
-    </div>
-
-    <div class="contact-actions">
-      <a class="btn primary email" href="mailto:mahmoud.alqadi@mamnexus.com">mahmoud.alqadi@mamnexus.com</a>
-      <a class="btn secondary" href="https://mamnexus.com">https://mamnexus.com</a>
-    </div>
-  </div>
-</section>
-```
-
+    </section>
   </main>
 
   <footer>
     <div class="container footer-row">
-      <span>© 2026 MAM Nexus. Led by Eng. Mahmoud Alqadi.</span>
-      <span>Non-clinical engineering R&D platform.</span>
+      <span>© 2026 MAM Nexus.</span>
+      <span>Surgical robotics simulation and engineering R&D platform.</span>
     </div>
   </footer>
 </body>
